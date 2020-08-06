@@ -7,7 +7,7 @@ const updateValAtKey = (obj, path, cb) => {
                 return checkValidPath(obj[path[0]], path.slice(1, path.length))
             }
         } else {
-            if (obj[path[0]]) {
+            if (true === obj.hasOwnProperty([path[0]])) {
                 return true
             } else {
                 return false
